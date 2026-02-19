@@ -30,11 +30,7 @@
             border-radius: 48px 48px 32px 32px;
             box-shadow: 0 30px 50px rgba(0, 0, 0, 0.6), 0 0 0 2px #d6b17e inset, 0 0 0 5px #2b5f7a inset;
             overflow: hidden;
-            transition: transform 0.2s ease;
-        }
-
-        .portal-card:hover {
-            transform: scale(1.01);
+            /* Убираем трансформацию всей карточки */
         }
 
         /* Шапка с суровым северным акцентом */
@@ -124,27 +120,28 @@
             color: white;
             text-decoration: none;
             box-shadow: 0 9px 0 #0f2a36, 0 5px 15px #00000050;
-            transition: 0.1s linear;
+            transition: all 0.15s ease; /* Плавность для всех изменений */
             letter-spacing: 0.3px;
             word-break: break-word;
             line-height: 1.3;
             min-height: 85px;
+            /* Эффект только на кнопках, карточка не двигается */
         }
 
         .portal-button:hover {
             background: #2e5f78;
             border-color: #f5d7a7;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 0 #0f2a36, 0 10px 20px black;
+            transform: translateY(-5px) scale(1.02); /* Небольшое увеличение и поднятие */
+            box-shadow: 0 12px 0 #0f2a36, 0 12px 20px black;
         }
 
         .portal-button:active {
-            transform: translateY(6px);
+            transform: translateY(4px) scale(0.98); /* Эффект нажатия */
             box-shadow: 0 4px 0 #0f2a36;
         }
 
-        /* Индивидуальный цвет для особых кнопок (по желанию можно кастомизировать) */
-        .portal-button:nth-child(1) { background: #7f4f24; border-color: #e3b27c; } /* Реестр — земляной */
+        /* Индивидуальный цвет для особых кнопок */
+        .portal-button:nth-child(1) { background: #7f4f24; border-color: #e3b27c; } /* Реестр */
         .portal-button:nth-child(2) { background: #1d5e8f; } /* Инструкция */
         .portal-button:nth-child(3) { background: #2a6d5c; } /* Скачать */
         .portal-button:nth-child(4) { background: #424874; border-color: #b9adde; } /* Генератор */
@@ -208,7 +205,7 @@
 
         <!-- Основной контент -->
         <div class="content">
-            <!-- Жирное предупреждение (disclaimer) -->
+            <!-- Жирное предупреждение -->
             <div class="warning">
                 <strong>⚠️ Внимание! ⚠️</strong>
                 Помните что намеренный доступ к ресурсам из реестра экстремистских материалов является нарушением законодательства рф!
@@ -233,7 +230,7 @@
                 </a>
             </div>
 
-            <!-- Подвал с "печатью" города (дополнительный штрих) -->
+            <!-- Подвал -->
             <div class="footer-note">
                 <p>⛅ Сделано с заботой о праве знать ⛅</p>
                 <small style="display:block; margin-top:8px; color:#2f4b5c;">г. Усинск, 2025 — информация вне стен</small>
